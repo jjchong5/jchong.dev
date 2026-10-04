@@ -4,57 +4,107 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jonathan Chong</title>
+<meta name="description" content="Jonathan Chong — AI builder in San Francisco. Data science, agentic apps, and QuickCal, a Bay Area events aggregator.">
+<meta property="og:title" content="Jonathan Chong">
+<meta property="og:description" content="AI builder in San Francisco. Data science, agentic apps, and QuickCal, a Bay Area events aggregator.">
+<meta property="og:url" content="https://jchong.dev/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0b0b'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' font-family='sans-serif' font-weight='700' fill='%23fff'%3EJC%3C/text%3E%3C/svg%3E">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 560px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    line-height: 1.6;
-    color: #1a1a1a;
-    background: #fff;
+  :root {
+    color-scheme: light dark;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink-secondary: #52514e;
+    --ink-muted: #898781;
+    --hairline: #e1e0d9;
+    --hover: #f2f1ed;
+    --accent: #0b0b0b;
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #111; }
-    a { color: #7ab8ff; }
-    .card { border-color: #333 !important; }
+    :root {
+      --page: #0d0d0d;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --ink-secondary: #c3c2b7;
+      --ink-muted: #898781;
+      --hairline: #2c2c2a;
+      --hover: #242422;
+      --accent: #ffffff;
+    }
   }
-  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
-  .tagline { color: #666; margin-top: 0; }
-  @media (prefers-color-scheme: dark) { .tagline { color: #999; } }
-  .links { margin-top: 2.5rem; display: grid; gap: 0.75rem; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    background: var(--page);
+    line-height: 1.55;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main { width: 100%; max-width: 600px; padding: 4.5rem 1rem 2rem; }
+  h1 { font-size: 2rem; margin: 0 0 0.25rem; letter-spacing: -0.02em; }
+  .role { margin: 0; color: var(--ink-secondary); font-size: 1.05rem; }
+  .blurb { margin: 1.25rem 0 0; color: var(--ink-secondary); }
+  .links { margin-top: 2.25rem; display: grid; gap: 0.75rem; }
   .card {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     padding: 1rem 1.25rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
     text-decoration: none;
     color: inherit;
+    transition: border-color 0.15s, background 0.15s;
   }
-  .card:hover { border-color: #999; }
+  .card:hover, .card:focus-visible { background: var(--hover); border-color: var(--ink-muted); outline: none; }
+  .card svg { width: 26px; height: 26px; flex: none; fill: currentColor; }
+  .card .text { flex: 1; min-width: 0; }
   .card strong { display: block; font-size: 1.05rem; }
-  .card span { font-size: 0.9rem; color: #666; }
-  @media (prefers-color-scheme: dark) { .card span { color: #999; } }
-  footer { margin-top: 3rem; font-size: 0.9rem; color: #666; }
-  @media (prefers-color-scheme: dark) { footer { color: #999; } }
+  .card span { font-size: 0.9rem; color: var(--ink-secondary); }
+  .card .arrow { color: var(--ink-muted); font-size: 1.1rem; flex: none; }
+  footer { width: 100%; max-width: 600px; padding: 1rem 1rem 2.5rem; font-size: 0.85rem; color: var(--ink-muted); }
 </style>
 </head>
 <body>
-  <h1>Jonathan Chong</h1>
-  <p class="tagline">jchong.dev</p>
+  <main>
+    <h1>Jonathan Chong</h1>
+    <p class="role">AI builder &middot; San Francisco</p>
+    <p class="blurb">Data science, cloud, and agentic apps. Available for AI / DS / ML roles in the Bay Area or remote.</p>
 
-  <div class="links">
-    <a class="card" href="https://calendar.jchong.dev/">
-      <strong>QuickCal</strong>
-      <span>A faster way to view calendar &amp; Bay Area events</span>
-    </a>
-    <a class="card" href="https://jjchong5.github.io/">
-      <strong>Portfolio</strong>
-      <span>AI/ML Engineer &amp; Data Scientist — projects &amp; background</span>
-    </a>
-  </div>
-
+    <nav class="links" aria-label="Links">
+      <a class="card" href="https://calendar.jchong.dev/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm-2 8h14v10H5V10z"/></svg>
+        <div class="text">
+          <strong>QuickCal</strong>
+          <span>All Bay Area events in one fast calendar &mdash; scraped, scored, no FOMO</span>
+        </div>
+        <div class="arrow" aria-hidden="true">&rarr;</div>
+      </a>
+      <a class="card" href="https://github.com/jjchong5">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+        <div class="text">
+          <strong>GitHub</strong>
+          <span>Projects, hackathons, and code</span>
+        </div>
+        <div class="arrow" aria-hidden="true">&rarr;</div>
+      </a>
+      <a class="card" href="https://linkedin.com/in/jjschong">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        <div class="text">
+          <strong>LinkedIn</strong>
+          <span>Background and experience</span>
+        </div>
+        <div class="arrow" aria-hidden="true">&rarr;</div>
+      </a>
+    </nav>
+  </main>
   <footer>&copy; 2026 Jonathan Chong</footer>
 </body>
 </html>
